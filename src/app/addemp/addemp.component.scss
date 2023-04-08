@@ -1,0 +1,25 @@
+* {
+ padding: 0;
+ margin: 0;
+}
+
+.wrapper {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+ background-color: #F4F5F6;
+ position: relative;
+}
+
+.reg-form {
+ background-color: white;
+ padding: 80px;
+ position: absolute;
+ top: 0;
+ bottom: 0;
+}
+
+.example-full-width {
+ display: block;
+}

@@ -1,0 +1,51 @@
+<div class="wrapper">
+ <div class="reg-form">
+  <h2>Employee Registration</h2>
+  <form [formGroup]="addemp">
+   <mat-form-field class="example-full-width">
+    <mat-label>Employee Name</mat-label>
+    <input matInput placeholder="Employee Name" value="" formControlName="empname">
+   </mat-form-field>
+   <mat-form-field class="example-full-width">
+    <mat-label>Employee Code</mat-label>
+    <input matInput placeholder="Employee Code" value="" formControlName="empcode">
+   </mat-form-field>
+   <mat-form-field class="example-full-width">
+    <mat-label>Employee Age</mat-label>
+    <input matInput placeholder="Employee Age" value="" formControlName="age">
+   </mat-form-field>
+
+   <mat-form-field appearance="fill">
+    <mat-label>Known Language</mat-label>
+    <mat-select formControlName="klang">
+     <mat-option *ngFor="let lang of langs" [value]="lang">
+      {{lang}}
+     </mat-option>
+    </mat-select>
+   </mat-form-field>
+
+   <mat-form-field class="example-full-width">
+    <mat-label>Previous Company</mat-label>
+    <input matInput placeholder="Previous Company" value="" formControlName="pcomp">
+   </mat-form-field>
+
+   <mat-form-field appearance="fill">
+    <mat-label>Date of joining</mat-label>
+    <!-- <input matInput [matDatepicker]="picker"> -->
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <input matInput value="" formControlName="date" [matDatepicker]="picker">
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+   </mat-form-field>
+
+   <mat-form-field class="example-full-width">
+    <mat-label>Previous Company Salary</mat-label>
+    <input matInput placeholder="Previous Company Salary" value="" formControlName="psal">
+   </mat-form-field>
+
+
+   <button mat-raised-button color="primary" (click)="saveemp()">Submit</button>
+
+  </form>
+ </div>
+</div>
